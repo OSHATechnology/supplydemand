@@ -1,0 +1,17 @@
+.btn-add{
+    margin-bottom: 15px;
+}
+.btn-view{
+    margin-right: 5px;
+    font-size: 15px;
+    color: black;
+}
+.btn-edit{
+    margin-right: 5px;
+    font-size: 15px;
+    color: black;
+}
+.btn-delete{
+    font-size: 15px;
+    color:red;
+}

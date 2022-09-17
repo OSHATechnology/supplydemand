@@ -19,11 +19,22 @@
         <link rel="stylesheet" href="{{asset('assets')}}/css/jquery.steps.css">
         <link rel="stylesheet" href="{{asset('assets')}}/css/jquery.timepicker.css">
         <link rel="stylesheet" href="{{asset('assets')}}/css/quill.snow.css">
+        <link rel="stylesheet" href="{{asset('assets')}}/css/custom.css">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+        {{-- <link rel="stylesheet" href="{{asset('assets')}}/css/dataTables.bootstrap4.css"> --}}
+
         <!-- Date Range Picker CSS -->
         <link rel="stylesheet" href="{{asset('assets')}}/css/daterangepicker.css">
         <!-- App CSS -->
         <link rel="stylesheet" href="{{asset('assets')}}/css/app-light.css" id="lightTheme">
         <link rel="stylesheet" href="{{asset('assets')}}/css/app-dark.css" id="darkTheme" disabled>
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
     </head>
     <body class="vertical  light  ">
         <div class="wrapper">
@@ -34,7 +45,7 @@
 
             <main role="main" class="main-content">
                 <div class="container-fluid">
-                    
+
                     @yield('content')
 
                 </div> <!-- .container-fluid -->
@@ -195,6 +206,19 @@
         <script src='{{asset('assets')}}/js/dropzone.min.js'></script>
         <script src='{{asset('assets')}}/js/uppy.min.js'></script>
         <script src='{{asset('assets')}}/js/quill.min.js'></script>
+
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+        
+        {{-- <script src='{{asset('assets')}}/js/dataTables.bootstrap4.min.js'></script>
+        <script src='{{asset('assets')}}/js/jquery.dataTables.min.js'></script> --}}
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready( function () {
+                $('#myTable').DataTable();
+            } );
+        </script>
         <script>
         $('.select2').select2(
         {

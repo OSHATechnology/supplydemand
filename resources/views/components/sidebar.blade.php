@@ -16,10 +16,36 @@
         </a>
       </div>
       <ul class="navbar-nav flex-fill w-100 mb-2">
+        <li class="nav-item w-100">
+            <a class="nav-link" href="/">
+                <i class="bi bi-microsoft"></i>
+              <span class="ml-3 item-text">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item w-100">
+            <a class="nav-link" href="/cabang">
+                <i class="bi bi-house-fill"></i>
+              <span class="ml-3 item-text">Cabang</span>
+            </a>
+        </li>
+        <li class="nav-item w-100">
+            <a class="nav-link" href="/barang">
+                <i class="bi bi-house-fill"></i>
+              <span class="ml-3 item-text">Barang</span>
+            </a>
+        </li>
+        <li class="nav-item w-100">
+            <a class="nav-link" href="/sales">
+                <i class="bi bi-cart-fill"></i>
+              <span class="ml-3 item-text">Penjualan</span>
+            </a>
+        </li>
+
         <li class="nav-item dropdown">
           <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-            <i class="fe fe-home fe-16"></i>
-            <span class="ml-3 item-text">Dashboard</span><span class="sr-only">(current)</span>
+            {{-- <i class="bi bi-house-fill"></i> --}}
+            <span class="ml-3 item-text">Dashboard</span>
+            <span class="sr-only">(current)</span>
           </a>
           <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
             <li class="nav-item active">
