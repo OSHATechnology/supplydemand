@@ -4,7 +4,6 @@
 <div class="row justify-content-center">
     <div class="col-12">
         <div class="row">
-            <!-- Small table -->
             <div class="col-md-12">
                 <div class="card shadow">
                     <div class="card-body">
@@ -13,17 +12,14 @@
                         <table class="table datatables" id="myTable">
                             <thead>
                                 <tr>
-                                    <th></th>
                                     <th>No</th>
-                                    <th>Name</th>
-                                    <th>City</th>
-                                    <th>Address</th>
-                                    <th>Phone</th>
+                                    <th>Nama Cabang</th>
+                                    <th>Alamat</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            {{-- <tbody>
                                 <tr>
                                     <td>
                                         <div class="custom-control custom-checkbox">
@@ -32,24 +28,28 @@
                                         </div>
                                     </td>
                                     <td>1</td>
-                                    <td>Toyota</td>
-                                    <td>Cimahi</td>
-                                    <td>Jl. kerkof</td>
-                                    <td>(022) 76876976</td>
-                                    <td>Active</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
                                     <td>
                                         <a href="" class="btn-view" title="View"><i class="bi bi-arrows-fullscreen"></i></a>
                                         <a href="" class="btn-edit" title="Edit"><i class="bi bi-pencil-square"></i></a>
                                         <a href="" class="btn-delete" title="Delete"><i class="bi bi-trash3-fill"></i></a>
                                     </td>
                                 </tr>
-                            </tbody>
+                            </tbody> --}}
                         </table>
                     </div>
                 </div>
-            </div> <!-- simple table -->
-        </div> <!-- end section -->
-    </div> <!-- .col-12 -->
+            </div>
+        </div>
+    </div>
+    @section('javascript')
+        <script type="text/javascript" src="{{asset('external_js/cabang.js')}}"></script>
+    @endsection
 </div>
 
 @endsection

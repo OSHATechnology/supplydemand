@@ -14,7 +14,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Cabang</th>
-                                    <th>Name</th>
+                                    <th>Nama</th>
                                     <th>Jenis</th>
                                     <th>Tanggal</th>
                                     <th>Harga</th>
@@ -51,6 +51,9 @@
             </div>
         </div>
     </div>
+    @section('javascript')
+        <script type="text/javascript" src="{{asset('external_js/barang.js')}}"></script>
+    @endsection
 </div>
 
 @endsection

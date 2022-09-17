@@ -40,6 +40,12 @@
               <span class="ml-3 item-text">Penjualan</span>
             </a>
         </li>
+        <li class="nav-item w-100">
+            <a class="nav-link" href="/car">
+                <i class="bi bi-cart-fill"></i>
+              <span class="ml-3 item-text">Mobil</span>
+            </a>
+        </li>
 
         <li class="nav-item dropdown">
           <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">

@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="{{asset('assets')}}/css/quill.snow.css">
         <link rel="stylesheet" href="{{asset('assets')}}/css/custom.css">
 
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+        {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"> --}}
         {{-- <link rel="stylesheet" href="{{asset('assets')}}/css/dataTables.bootstrap4.css"> --}}
 
         <!-- Date Range Picker CSS -->
@@ -174,7 +174,7 @@
                 </div>
             </main> <!-- main -->
         </div> <!-- .wrapper -->
-        <script src="{{asset('assets')}}/js/jquery.min.js"></script>
+        {{-- <script src="{{asset('assets')}}/js/jquery.min.js"></script> --}}
         <script src="{{asset('assets')}}/js/popper.min.js"></script>
         <script src="{{asset('assets')}}/js/moment.min.js"></script>
         <script src="{{asset('assets')}}/js/bootstrap.min.js"></script>
@@ -207,13 +207,18 @@
         <script src='{{asset('assets')}}/js/uppy.min.js'></script>
         <script src='{{asset('assets')}}/js/quill.min.js'></script>
 
-        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+        {{-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script> --}}
         
         {{-- <script src='{{asset('assets')}}/js/dataTables.bootstrap4.min.js'></script>
         <script src='{{asset('assets')}}/js/jquery.dataTables.min.js'></script> --}}
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
+        @yield('javascript')
+        
         <script>
             $(document).ready( function () {
                 $('#myTable').DataTable();

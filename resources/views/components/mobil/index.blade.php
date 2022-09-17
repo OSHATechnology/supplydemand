@@ -7,15 +7,15 @@
             <div class="col-md-12">
                 <div class="card shadow">
                     <div class="card-body">
-                        <h3 class="float-left">Table Penjualan</h3>
+                        <h3 class="float-left">Table Mobil</h3>
                         <button class="btn btn-primary btn-add float-right" type="button" title="Add New"><i class="bi bi-plus"></i> Add New</button>
                         <table class="table datatables" id="myTable">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Tanggal Penjualan</th>
-                                    <th>Invoice</th>
-                                    <th>Total Pembayaran</th>
+                                    <th>Cabang</th>
+                                    <th>Nama</th>
+                                    <th>Tanggal Mobil Masuk</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -49,7 +49,7 @@
         </div>
     </div>
     @section('javascript')
-        <script type="text/javascript" src="{{asset('external_js/penjualan.js')}}"></script>
+        <script type="text/javascript" src="{{asset('external_js/mobil.js')}}"></script>
     @endsection
 </div>
 
