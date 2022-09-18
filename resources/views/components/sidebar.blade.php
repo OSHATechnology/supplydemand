@@ -16,38 +16,38 @@
         </a>
       </div>
       <ul class="navbar-nav flex-fill w-100 mb-2">
-        <li class="nav-item w-100">
+        <li class="nav-item w-100 {{ Request::is('/') ? 'active' : '' }}">
             <a class="nav-link" href="/">
                 <i class="bi bi-microsoft"></i>
               <span class="ml-3 item-text">Dashboard</span>
             </a>
         </li>
-        <li class="nav-item w-100">
+        <li class="nav-item w-100 {{ Request::is('cabang') ? 'active' : '' }}">
             <a class="nav-link" href="/cabang">
                 <i class="bi bi-house-fill"></i>
               <span class="ml-3 item-text">Cabang</span>
             </a>
         </li>
-        <li class="nav-item w-100">
+        <li class="nav-item w-100 {{ Request::is('barang') ? 'active' : '' }}">
             <a class="nav-link" href="/barang">
-                <i class="bi bi-house-fill"></i>
+                <i class="bi bi-box-seam-fill"></i>
               <span class="ml-3 item-text">Barang</span>
             </a>
         </li>
-        <li class="nav-item w-100">
+        <li class="nav-item w-100 {{ Request::is('sales') ? 'active' : '' }}">
             <a class="nav-link" href="/sales">
                 <i class="bi bi-cart-fill"></i>
               <span class="ml-3 item-text">Penjualan</span>
             </a>
         </li>
-        <li class="nav-item w-100">
+        <li class="nav-item w-100 {{ Request::is('car') ? 'active' : '' }}">
             <a class="nav-link" href="/car">
-                <i class="bi bi-cart-fill"></i>
+                <i class="bi bi-car-front-fill"></i>
               <span class="ml-3 item-text">Mobil</span>
             </a>
         </li>
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
             {{-- <i class="bi bi-house-fill"></i> --}}
             <span class="ml-3 item-text">Dashboard</span>
@@ -70,9 +70,9 @@
               <a class="nav-link pl-3" href="./dashboard-system.html"><span class="ml-1 item-text">Systems</span></a>
             </li>
           </ul>
-        </li>
+        </li> -->
       </ul>
-      <p class="text-muted nav-heading mt-4 mb-1">
+      <!-- <p class="text-muted nav-heading mt-4 mb-1">
         <span>Components</span>
       </p>
       <ul class="navbar-nav flex-fill w-100 mb-2">
@@ -318,12 +318,12 @@
             <i class="fe fe-help-circle fe-16"></i>
             <span class="ml-3 item-text">Getting Start</span>
           </a>
-        </li>
+        </li> -->
       </ul>
       <div class="btn-box w-100 mt-4 mb-1">
-        <a href="https://themeforest.net/item/tinydash-bootstrap-html-admin-dashboard-template/27511269" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+        <!-- <a href="https://themeforest.net/item/tinydash-bootstrap-html-admin-dashboard-template/27511269" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
           <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">Buy now</span>
-        </a>
+        </a> -->
       </div>
     </nav>
 </aside>
