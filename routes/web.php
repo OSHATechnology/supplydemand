@@ -2,10 +2,11 @@
 
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\CabangController;
+use App\Http\Controllers\DetailMobilController;
+use App\Http\Controllers\DetailPenjualanController;
+use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\MobilController;
 use App\Http\Controllers\PenjualanController;
-use App\Models\Barang;
-use App\Models\Mobil;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,8 +30,17 @@ Route::get('/cabang', [CabangController::class, 'index']);
 // Barang
 Route::get('/barang',[BarangController::class, 'index']);
 
+// JenisBarang
+Route::get('/jenisbarang',[JenisBarangController::class, 'index']);
+
 // Penjualan
 Route::get('/sales',[PenjualanController::class, 'index']);
 
+// Detail Penjualan
+Route::get('/salesdetail',[DetailPenjualanController::class, 'index']);
+
 // Mobil
 Route::get('/car',[MobilController::class, 'index']);
+
+// Detail Mobil
+Route::get('/cardetail',[DetailMobilController::class, 'index']);
