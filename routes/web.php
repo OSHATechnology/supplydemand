@@ -7,6 +7,7 @@ use App\Http\Controllers\DetailPenjualanController;
 use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\MobilController;
 use App\Http\Controllers\PenjualanController;
+use App\Models\Produksi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('components.dashboard');
+    $data = Produksi::groupBy('tahun')->get();
+    return view('components.dashboard', ['data'=>$data]);
 });
 
 // Cabang
@@ -44,3 +46,6 @@ Route::get('/car',[MobilController::class, 'index']);
 
 // Detail Mobil
 Route::get('/cardetail',[DetailMobilController::class, 'index']);
+
+// countPenjualan
+Route::get('/countPenjualan',[BarangController::class, 'countPenjualan']);
