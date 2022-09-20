@@ -413,7 +413,7 @@ $.ajax({
         
 
         var pieChartWidget,pieChartWidgetOptions={
-            series: [...JSON.parse(parseData.jml)],
+            series: [parseData.jml[0], parseData.jml[1], parseData.jml[2]],
             chart:{
                 type:"pie",
                 height:160,
@@ -426,7 +426,7 @@ $.ajax({
                     donut:{size:"0"},
                     expandOnClick:!1}
                 },
-                labels:[...JSON.parse(parseData.tipe_mobil)],
+                labels:[parseData.tipe_mobil[0], parseData.tipe_mobil[1], parseData.tipe_mobil[2]],
                 dataLabels:{
                     enabled:!0,
                     style:{
