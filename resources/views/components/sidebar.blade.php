@@ -26,25 +26,25 @@
         <li class="nav-item w-100 {{ Request::is('cabang') ? 'active' : '' }}">
             <a class="nav-link" href="/cabang">
                 <i class="bi bi-house-fill"></i>
-              <span class="ml-3 item-text">Cabang</span>
+              <span class="ml-3 item-text">Branch</span>
             </a>
         </li>
         <li class="nav-item w-100 {{ Request::is('barang') ? 'active' : '' }}">
             <a class="nav-link" href="/barang">
                 <i class="bi bi-box-seam-fill"></i>
-              <span class="ml-3 item-text">Barang</span>
+              <span class="ml-3 item-text">Product</span>
             </a>
         </li>
         <li class="nav-item w-100 {{ Request::is('sales') ? 'active' : '' }}">
             <a class="nav-link" href="/sales">
                 <i class="bi bi-cart-fill"></i>
-              <span class="ml-3 item-text">Penjualan</span>
+              <span class="ml-3 item-text">Sales</span>
             </a>
         </li>
         <li class="nav-item w-100 {{ Request::is('car') ? 'active' : '' }}">
             <a class="nav-link" href="/car">
                 <i class="bi bi-car-front-fill"></i>
-              <span class="ml-3 item-text">Mobil</span>
+              <span class="ml-3 item-text">Car</span>
             </a>
         </li>
 

@@ -45,13 +45,13 @@
                         <div class="col-6 text-center mb-3">
                           <p class="mb-1 small text-muted">Total Actual Sales</p>
                           <span class="h3 actual-sales text-success">26</span><br>
-                          <span class="small text-muted">Unit</span>
+                          <!-- <span class="small text-muted">Unit</span> -->
                           <!-- <span class="fe fe-arrow-up text-success fe-12"></span> -->
                         </div>
                         <div class="col-6 text-center mb-3">
                           <p class="mb-1 small text-muted">Total Forecast Sales</p>
                           <span class="h3 forecast-sales text-danger">$260</span><br>
-                          <span class="small text-muted">Unit</span>
+                          <!-- <span class="small text-muted">Unit</span> -->
                           <!-- <span class="fe fe-arrow-up text-success fe-12"></span> -->
                         </div>
                         <div class="col-4 text-center mb-3">
@@ -99,32 +99,32 @@
                   <div class="card-body">
                     <div class="row mt-1 align-items-center">
                       <div class="col-12 col-lg-4 text-left pl-4">
-                        <p class="mb-1 small text-muted">Data Produksi Mobil</p>
+                        <p class="mb-1 small text-muted">Car Production Data</p>
                         <span class="h3 data-produksi-mobil">29019 Unit</span>
                         <!-- <span class="small text-muted">+20%</span>
                         <span class="fe fe-arrow-up text-success fe-12"></span> -->
                         <p class="text-muted mt-2"></p>
                       </div>
                       <div class="col-6 col-lg-2 text-center py-4">
-                        <p class="mb-1 small text-muted">Total Penjualan</p>
+                        <p class="mb-1 small text-muted">Sales</p>
                         <span class="h3 data-penjualan">20391 <span class="small text-muted"> Unit /tahun</span></span><br />
                         <!-- <span class="small text-muted">+20%</span> -->
                         <!-- <span class="fe fe-arrow-up text-success fe-12"></span> -->
                       </div>
                       <div class="col-6 col-lg-2 text-center py-4 mb-2">
-                        <p class="mb-1 small text-muted">Penjualan Tertinggi</p>
+                        <p class="mb-1 small text-muted">Highest Sales</p>
                         <span class="h3 total-penjualan-tertinggi">20812  <span class="small text-muted"> Unit /tahun</span></span><br />
                         <!-- <span class="small text-muted">+6%</span>
                         <span class="fe fe-arrow-up text-success fe-12"></span> -->
                       </div>
                       <div class="col-6 col-lg-2 text-center py-4">
-                        <p class="mb-1 small text-muted">Penjualan Terendah</p>
+                        <p class="mb-1 small text-muted">Lowest Sales</p>
                         <span class="h3 total-penjualan-terendah">10921  <span class="small text-muted"> Unit /tahun</span></span><br />
                         <!-- <span class="small text-muted">+20%</span>
                         <span class="fe fe-arrow-down text-danger fe-12"></span> -->
                       </div>
                       <div class="col-6 col-lg-2 text-center py-4">
-                        <p class="mb-1 small text-muted">Produksi Tertinggi</p>
+                        <p class="mb-1 small text-muted">Highest Production</p>
                         <span class="h3 total-produksi-tertinggi">19383</span><br />
                         <!-- <span class="small text-muted">-2%</span>
                         <span class="fe fe-arrow-up text-success fe-12"></span> -->
@@ -146,7 +146,7 @@
                     </div>
                     <div class="row items-align-center">
                         <div class="col-12 text-center">
-                        <p class="text-muted mb-1">Sisa Produksi Tahun ini</p>
+                        <p class="text-muted mb-1">Remaining Production This Year</p>
                         <h6 class="mb-1 sisa-produksi">$1,823</h6>
                         <!-- <p class="text-muted mb-0">+12%</p> -->
                         </div>

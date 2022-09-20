@@ -44,10 +44,10 @@ $.ajax({
         $('.total-penjualan-tertinggi').html(`${numberWithSeparator(penjualanTertinggi)} <span class="small text-muted">Unit</span>`)
         $('.total-penjualan-terendah').html(`${numberWithSeparator(penjualanTerendah)} <span class="small text-muted">Unit</span>`)
         $('.total-produksi-tertinggi').html(`${numberWithSeparator(produksiTertinggi)} <span class="small text-muted">Unit</span>`)
-        $('.data-produksi-mobil').html(`${numberWithSeparator(sumProduksi)} <span class="small text-muted">Unit/Tahun</span>`)
-        $('.data-penjualan').html(`${numberWithSeparator(sumPenjualan)} <span class="small text-muted">Unit/Tahun</span>`)
-        $('.actual-sales').html(`${numberWithSeparator(sum)} <span class="small text-muted">Unit/Tahun</span>`)
-        $('.forecast-sales').html(`${numberWithSeparator(sumProyeksiPenjualan.toFixed(0))} <span class="small text-muted">Unit/Tahun</span>`)
+        $('.data-produksi-mobil').html(`${numberWithSeparator(sumProduksi)} <span class="small text-muted">Unit/Year</span>`)
+        $('.data-penjualan').html(`${numberWithSeparator(sumPenjualan)} <span class="small text-muted">Unit/Year</span>`)
+        $('.actual-sales').html(`${numberWithSeparator(sum)} <span class="small text-muted">Unit/Year</span>`)
+        $('.forecast-sales').html(`${numberWithSeparator(sumProyeksiPenjualan.toFixed(0))} <span class="small text-muted">Unit/Year</span>`)
         $('.sisa-produksi').html(`${numberWithSeparator(sisa_produksi)} <span class="small text-muted">Unit</span>`)
         // var areachart,areaChartOptions={
         //     series:[
@@ -264,13 +264,13 @@ $.ajax({
         var areachart,areaChartOptions={
             series:[
                 {
-                    name:"Data Produksi",
+                    name:"Production Data",
                     data:parseData.produksi
                 },{
-                    name:"Data Penjualan",
+                    name:"Sales",
                     data:parseData.penjualan
                 }, {
-                    name:"Proyeksi / Prediksi Produksi Mobil",
+                    name:"Car Production Prediction",
                     data:parseData.proyeksi
                 },],
             chart:{
