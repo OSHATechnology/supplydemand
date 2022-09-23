@@ -3234,7 +3234,7 @@ input[type="button"].btn-block {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9); }
+  color: #fff }
 
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
@@ -8057,10 +8057,10 @@ svg.navbar-brand-img {
   fill: #1b68ff; }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #001a4e; }
+  color: #fff; }
   .navbar-light .navbar-nav .nav-link:hover {
     background: #f8f9fa;
-    color: #1b68ff; }
+    color: #000; }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #f8f9fa; }
