@@ -9,36 +9,8 @@ function generateData(e,t,o) {
     return r
 }
 
-     // option = [data.length+1]
-     // option[i] = document.createElement('option')
-     // option[i].text = '--PILIH--'
-     // option[i].value = ''
-     // listType.add(option[i])
 
-     // i++
-     // data.forEach(function (item) {
-     // if(value2 != null) value_ = item[value] + ' - ' + item[value2]; else value_ = item[value];
-     //      option[i] = document.createElement('option')
-     //      option[i].text = value_
-     //      option[i].value = item[key]
-     //      if(id != null)
-     //      {
-     //           if(id == item[key])
-     //           {
-     //                option[i].selected = 'selected'
-     //           }
-     //      }
-     //      listType.add(option[i])
-     //      i++
-     // })
-
-var year_input = $('#input-year').val()
-
-if(year_input === '') {
-     countProduct($('#select-year').val())
-} else {
-     countProduct($('#select-year').val())
-}
+countProduct($('#select-year').val())
 
 $('#select-year').on('change', function() {
      var year = $('#select-year').val()
@@ -164,6 +136,21 @@ function countProduct(year) {
                sumProyeksiPenjualan += parseData.proyeksi_penjualan[i];
           }
           
+          var htmlRadial = '<div class="card shadow eq-card mb-4">'+
+                              '<div class="card-body">'+
+                                   '<div class="chart-widget mb-2">'+
+                                        '<div id="radialbar"></div>'+
+                                   '</div>'+
+                                   '<div class="row items-align-center">'+
+                                        '<div class="col-12 text-center">'+
+                                             '<p class="text-muted mb-1">Remaining Production This Year</p>'+
+                                             '<h6 class="mb-1 sisa-produksi"></h6>'+
+                                        '</div>'+
+                                   '</div>'+
+                              '</div> '+
+                         '</div>';
+          $('#div-radial').html(htmlRadial)
+
           let sisa_produksi = sumProduksi - sumPenjualan;
           let persen = (sumPenjualan/sumProduksi) * 100;
           $('.total-penjualan-tertinggi').html(`${numberWithSeparator(penjualanTertinggi)} <span class="small text-muted">Unit</span>`)
@@ -315,20 +302,7 @@ function countProduct(year) {
           //     areachartCtn=document.querySelector("#areaChart");
           //     areachartCtn&&(areachart=new ApexCharts(areachartCtn,areaChartOptions)).render();
           // $("#areaChart").load(location.href);
-          var htmlRadial = '<div class="card shadow eq-card mb-4">'+
-                              '<div class="card-body">'+
-                                   '<div class="chart-widget mb-2">'+
-                                        '<div id="radialbar"></div>'+
-                                   '</div>'+
-                                   '<div class="row items-align-center">'+
-                                        '<div class="col-12 text-center">'+
-                                             '<p class="text-muted mb-1">Remaining Production This Year</p>'+
-                                             '<h6 class="mb-1 sisa-produksi">$1,823</h6>'+
-                                        '</div>'+
-                                   '</div>'+
-                              '</div> '+
-                         '</div>';
-          $('#div-radial').html(htmlRadial)
+          
           $('#div-pie').html(htmlPie)
           var radialbarChart,
                radialbarOptions={

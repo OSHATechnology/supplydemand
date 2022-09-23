@@ -85,7 +85,7 @@ class BarangController extends Controller
         //             ->get();
 
         $data = DB::table('tb_produksi')
-            ->where('id_jenis_barang', '=', 3)
+            ->where('id_jenis_barang', '=', 1)
             ->where('tahun','=', $year)
             ->get();
 
@@ -100,6 +100,8 @@ class BarangController extends Controller
 
         $temp = (count($data)*$totalXY) - ($totalX*$totalY);
         $temp2 = (count($data)*$totalX2) - ($totalX*$totalX);
+     //    dd($data);
+
         $nilaiB = $temp / $temp2;
 
         $tempA = ($totalY - ($nilaiB*$totalX));
