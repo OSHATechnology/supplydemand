@@ -30,7 +30,7 @@ class BarangController extends Controller
         return view('components.barang.index');
     }
 
-    public function countPenjualan()
+    public function countPenjualan($year)
     {
         $init = 0;
         $penjualan = [];
@@ -39,14 +39,14 @@ class BarangController extends Controller
         $data_mobil = DB::table('tb_penjualan')
             ->select('tipe_mobil', DB::raw('count(tipe_mobil) as total'))
             ->where('jenis', '=', 'mobil')
-            ->where('tahun','=', '2020')
+            ->where('tahun','=', $year)
             ->groupBy('tipe_mobil')
             ->get();
         if(!$init) {
             $data_penjualan = DB::table('tb_penjualan')
             ->select('total', 'tipe_mobil')
             ->where('jenis', '=', 'mobil')
-            ->where('tahun','=', '2020')
+            ->where('tahun','=', $year)
             ->get();
 
             
@@ -86,7 +86,7 @@ class BarangController extends Controller
 
         $data = DB::table('tb_produksi')
             ->where('id_jenis_barang', '=', 3)
-            ->where('tahun','=', '2019')
+            ->where('tahun','=', $year)
             ->get();
 
         for($i = 0; $i < count($data); $i++) {

@@ -10,11 +10,11 @@
             <div class="col-auto">
                 <form action="">
                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-4 col-form-label">Tahun</label>
+                        <label for="inputEmail3" class="col-sm-4 col-form-label">Year</label>
                         <div class="col-sm-8">
-                            <select name="" id="" class="form-control">
+                            <select name="" id="select-year" class="form-control">
                                 @foreach($data as $d)
-                                    <option value="">{{$d->tahun}}</option>
+                                    <option value="{{$d->tahun}}">{{$d->tahun}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -94,139 +94,112 @@
             
         </div> <!-- .row -->
 
-        <div class="mb-2 align-items-center">
-                <div class="card shadow mb-4">
-                  <div class="card-body">
-                    <div class="row mt-1 align-items-center">
-                      <div class="col-12 col-lg-4 text-left pl-4">
-                        <p class="mb-1 small text-muted">Car Production Data</p>
-                        <span class="h3 data-produksi-mobil">29019 Unit</span>
-                        <!-- <span class="small text-muted">+20%</span>
-                        <span class="fe fe-arrow-up text-success fe-12"></span> -->
-                        <p class="text-muted mt-2"></p>
-                      </div>
-                      <div class="col-6 col-lg-2 text-center py-4">
-                        <p class="mb-1 small text-muted">Sales</p>
-                        <span class="h3 data-penjualan">20391 <span class="small text-muted"> Unit /tahun</span></span><br />
-                        <!-- <span class="small text-muted">+20%</span> -->
-                        <!-- <span class="fe fe-arrow-up text-success fe-12"></span> -->
-                      </div>
-                      <div class="col-6 col-lg-2 text-center py-4 mb-2">
-                        <p class="mb-1 small text-muted">Highest Sales</p>
-                        <span class="h3 total-penjualan-tertinggi">20812  <span class="small text-muted"> Unit /tahun</span></span><br />
-                        <!-- <span class="small text-muted">+6%</span>
-                        <span class="fe fe-arrow-up text-success fe-12"></span> -->
-                      </div>
-                      <div class="col-6 col-lg-2 text-center py-4">
-                        <p class="mb-1 small text-muted">Lowest Sales</p>
-                        <span class="h3 total-penjualan-terendah">10921  <span class="small text-muted"> Unit /tahun</span></span><br />
-                        <!-- <span class="small text-muted">+20%</span>
-                        <span class="fe fe-arrow-down text-danger fe-12"></span> -->
-                      </div>
-                      <div class="col-6 col-lg-2 text-center py-4">
-                        <p class="mb-1 small text-muted">Highest Production</p>
-                        <span class="h3 total-produksi-tertinggi">19383</span><br />
-                        <!-- <span class="small text-muted">-2%</span>
-                        <span class="fe fe-arrow-up text-success fe-12"></span> -->
-                      </div>
-                    </div>
-                    <div class="chartbox mr-4">
-                      <div id="areaChart"></div>
-                    </div>
-                  </div> <!-- .card-body -->
-                </div> <!-- .card -->
-              </div>
-        <div class="row items-align-baseline">
-            
-            <div class="col-md-12 col-lg-6">
-                <div class="card shadow eq-card mb-4">
+          <div class="mb-2 align-items-center" id="div-chart">
+               <div class="card shadow mb-4">
                     <div class="card-body">
-                    <div class="chart-widget mb-2">
-                        <div id="radialbar"></div>
+                         <div class="row mt-1 align-items-center">
+                              <div class="col-12 col-lg-4 text-left pl-4">
+                                   <p class="mb-1 small text-muted">Car Production Data</p>
+                                   <span class="h3 data-produksi-mobil">29019 Unit</span>
+                                   <!-- <span class="small text-muted">+20%</span>
+                                   <span class="fe fe-arrow-up text-success fe-12"></span> -->
+                                   <p class="text-muted mt-2"></p>
+                              </div>
+                              <div class="col-6 col-lg-2 text-center py-4">
+                                   <p class="mb-1 small text-muted">Sales</p>
+                                   <span class="h3 data-penjualan">20391 <span class="small text-muted"> Unit /tahun</span></span><br />
+                                   <!-- <span class="small text-muted">+20%</span> -->
+                                   <!-- <span class="fe fe-arrow-up text-success fe-12"></span> -->
+                              </div>
+                              <div class="col-6 col-lg-2 text-center py-4 mb-2">
+                                   <p class="mb-1 small text-muted">Highest Sales</p>
+                                   <span class="h3 total-penjualan-tertinggi">20812  <span class="small text-muted"> Unit /tahun</span></span><br />
+                                   <!-- <span class="small text-muted">+6%</span>
+                                   <span class="fe fe-arrow-up text-success fe-12"></span> -->
+                              </div>
+                              <div class="col-6 col-lg-2 text-center py-4">
+                                   <p class="mb-1 small text-muted">Lowest Sales</p>
+                                   <span class="h3 total-penjualan-terendah">10921  <span class="small text-muted"> Unit /tahun</span></span><br />
+                                   <!-- <span class="small text-muted">+20%</span>
+                                   <span class="fe fe-arrow-down text-danger fe-12"></span> -->
+                              </div>
+                              <div class="col-6 col-lg-2 text-center py-4">
+                                   <p class="mb-1 small text-muted">Highest Production</p>
+                                   <span class="h3 total-produksi-tertinggi">19383</span><br />
+                                   <!-- <span class="small text-muted">-2%</span>
+                                   <span class="fe fe-arrow-up text-success fe-12"></span> -->
+                              </div>
+                         </div>
+                         <div class="chartbox mr-4">
+                              <div id="areaChart"></div>
+                         </div>
                     </div>
-                    <div class="row items-align-center">
-                        <div class="col-12 text-center">
-                        <p class="text-muted mb-1">Remaining Production This Year</p>
-                        <h6 class="mb-1 sisa-produksi">$1,823</h6>
-                        <!-- <p class="text-muted mb-0">+12%</p> -->
-                        </div>
-                        <!-- <div class="col-4 text-center">
-                        <p class="text-muted mb-1">Revenue</p>
-                        <h6 class="mb-1">$6,830</h6>
-                        <p class="text-muted mb-0">+8%</p>
-                        </div>
-                        <div class="col-4 text-center">
-                        <p class="text-muted mb-1">Earning</p>
-                        <h6 class="mb-1">$4,830</h6>
-                        <p class="text-muted mb-0">+8%</p>
-                        </div> -->
+               </div>
+          </div>
+          <div class="row items-align-baseline">
+               <div class="col-md-12 col-lg-6" id="div-radial">
+                    <div class="card shadow eq-card mb-4">
+                         <div class="card-body">
+                              <div class="chart-widget mb-2">
+                                   <div id="radialbar"></div>
+                              </div>
+                              <div class="row items-align-center">
+                                   <div class="col-12 text-center">
+                                        <p class="text-muted mb-1">Remaining Production This Year</p>
+                                        <h6 class="mb-1 sisa-produksi">$1,823</h6>
+                                   </div>
+                              </div>
+                         </div> 
                     </div>
-                    </div> <!-- .card-body -->
-                </div> <!-- .card -->
-            </div> <!-- .col -->
-            <div class="col-md-12 col-lg-6">
-                  <div class="card shadow eq-card mb-4">
-                    <div class="card-body">
-                      <div class="card-title">
-                        <strong>Services</strong>
-                        <a class="float-right small text-muted" href="#!">View all</a>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="row align-items-center my-2">
-                            <div class="col">
-                              <strong>Cloud Server</strong>
-                              <div class="my-0 text-muted small">Global, Services</div>
-                            </div>
-                            <div class="col-auto">
-                              <strong>+85%</strong>
-                            </div>
-                            <div class="col-3">
-                              <div class="progress" style="height: 4px;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+               <div class="col-md-12 col-lg-6">
+                    <div class="card shadow eq-card mb-4">
+                         <div class="card-body">
+                              <div class="card-title">
+                                   <strong>Car Type</strong>
                               </div>
-                            </div>
-                          </div>
-                          <div class="row align-items-center my-2">
-                            <div class="col">
-                              <strong>CDN</strong>
-                              <div class="my-0 text-muted small">Global, Services</div>
-                            </div>
-                            <div class="col-auto">
-                              <strong>+75%</strong>
-                            </div>
-                            <div class="col-3">
-                              <div class="progress" style="height: 4px;">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                              <div class="row">
+                                   <div class="col-md-12" id="div-cartype">
+                                        <div class="row align-items-center my-2">
+                                             <div class="col">
+                                                  <strong>Cloud Server</strong>
+                                                  <div class="my-0 text-muted small">Global, Services</div>
+                                             </div>
+                                             <div class="col-auto">
+                                                  <strong>+85%</strong>
+                                             </div>
+                                             <div class="col-3">
+                                                  <div class="progress" style="height: 4px;">
+                                                       <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row align-items-center my-2">
+                                             <div class="col">
+                                                  <strong>CDN</strong>
+                                                  <div class="my-0 text-muted small">Global, Services</div>
+                                             </div>
+                                        <div class="col-auto">
+                                             <strong>+75%</strong>
+                                        </div>
+                                        <div class="col-3">
+                                             <div class="progress" style="height: 4px;">
+                                                  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                             </div>
+                                        </div>
+                                   </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="row align-items-center my-2">
-                            <div class="col">
-                              <strong>Databases</strong>
-                              <div class="my-0 text-muted small">Local, DC</div>
-                            </div>
-                            <div class="col-auto">
-                              <strong>+62%</strong>
-                            </div>
-                            <div class="col-3">
-                              <div class="progress" style="height: 4px;">
-                                <div class="progress-bar" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
+                              <div class="col-md-12" id="div-pie">
+                                   <div id="chart-box" class="mt-3">
+                                        <div id="pieChartWidget"></div>
+                                   </div>
                               </div>
-                            </div>
-                          </div>
-                        </div> <!-- .col-md-12 -->
-                        <div class="col-md-12">
-                          <div id="chart-box" class="mt-3">
-                            <div id="pieChartWidget"></div>
-                          </div>
-                        </div>
-                      </div> <!-- .row -->
-                    </div> <!-- .card-body -->
-                  </div> <!-- .card -->
-                </div> <!-- .col-md-4 -->
-        </div> <!-- .row -->
-    </div> <!-- .col-12 -->
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
 
     @section('javascript')
         <script type="text/javascript" src="{{asset('external_js/dashboard.js')}}"></script>

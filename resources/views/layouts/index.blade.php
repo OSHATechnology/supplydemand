@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="{{asset('assets')}}/images/toyota1.png">
+        <link rel="icon" href="{{asset('assets')}}/images/toyota-logo-loading.png">
         <title>Supply Demand Prediction</title>
         <!-- Simple bar CSS -->
         <link rel="stylesheet" href="{{asset('assets')}}/css/simplebar.css">
@@ -37,7 +37,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     </head>
-    <body class="vertical  light  ">
+    <body class="vertical light collapsed">
         <div class="wrapper">
 
             @include('components.header')

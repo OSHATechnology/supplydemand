@@ -48,4 +48,4 @@ Route::get('/car',[MobilController::class, 'index']);
 Route::get('/cardetail',[DetailMobilController::class, 'index']);
 
 // countPenjualan
-Route::get('/countPenjualan',[BarangController::class, 'countPenjualan']);
+Route::get('/countPenjualan/{year}',[BarangController::class, 'countPenjualan']);
