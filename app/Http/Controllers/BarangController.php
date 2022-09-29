@@ -6,6 +6,7 @@ use App\Models\Barang;
 use App\Models\DetailPenjualan;
 use App\Models\Produksi;
 use App\Models\Penjualan2;
+use App\Models\Target;
 use Illuminate\Http\Request;
 use DB;
 
@@ -56,6 +57,10 @@ class BarangController extends Controller
                 $x++;
             }
         }
+        $dataTarget = DB::table('target_sales')
+                         ->select('*')
+                         ->where('tahun', '=', $year)
+                         ->get();
         $xArray = [];
         $totalX = 0;
         $totalY = 0;
@@ -160,6 +165,6 @@ class BarangController extends Controller
             $xTipe++;
         }
 
-        echo json_encode(array('produksi' => $nilaiYArray, 'penjualan' => $penjualan, 'time' => $time, 'proyeksi' => $nilaiProyeksiYArray, 'proyeksi_penjualan' => $nilaiProyeksiArrayPenjualan, 'tipe_mobil' => $tipe, 'jml' => $jml, 'data_mobil' => $data_mobil));
+        echo json_encode(array('produksi' => $nilaiYArray, 'penjualan' => $penjualan, 'time' => $time, 'proyeksi' => $nilaiProyeksiYArray, 'proyeksi_penjualan' => $nilaiProyeksiArrayPenjualan, 'tipe_mobil' => $tipe, 'jml' => $jml, 'data_mobil' => $data_mobil, 'target_sales'=>$dataTarget));
     }
 }

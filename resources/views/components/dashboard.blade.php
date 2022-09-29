@@ -1,98 +1,86 @@
 @extends('layouts.index')
 @section('content')
 
-<div class="row justify-content-center">
-    <div class="col-12">
-        <div class="row align-items-center mb-2">
-            <div class="col">
-                <h2 class="h5 page-title">Welcome!</h2>
-            </div>
-            <div class="col-auto">
-                <form action="">
-                    <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-4 col-form-label">Year</label>
-                        <div class="col-sm-8">
-                            <select name="" id="select-year" class="form-control">
-                                @foreach($data as $d)
-                                    <option value="{{$d->tahun}}">{{$d->tahun}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+          <div class="row justify-content-center">
+               <div class="col-12">
+                    <div class="row align-items-center mb-2">
+                         <div class="col">
+                              <h2 class="h5 page-title">Welcome!</h2>
+                         </div>
+                         <div class="col-auto">
+                              <form action="">
+                                   <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Year</label>
+                                        <div class="col-sm-8">
+                                             <select name="" id="select-year" class="form-control">
+                                                  @foreach($data as $d)
+                                                       <option value="{{$d->tahun}}">{{$d->tahun}}</option>
+                                                  @endforeach
+                                             </select>
+                                         </div>
+                                   </div>
+                              </form>
+                         </div>
                     </div>
+                    <div class="row items-align-baseline">
+                         <div class="col-md-12">
+                              <div class="card shadow mb-4">
+                                   <div class="card-header">
+                                        <strong>Goal</strong>
+                                   </div>
+                                   <div class="card-body px-4">
+                                        <div class="row border-bottom">
+                                             <div class="col-6 text-center mb-3">
+                                                  <p class="mb-1 small text-muted">Total Actual Sales</p>
+                                                  <span class="h3 actual-sales text-success">26</span><br>
+                                             </div>
+                                             <div class="col-6 text-center mb-3">
+                                                  <p class="mb-1 small text-muted">Total Forecast Sales</p>
+                                                  <span class="h3 forecast-sales text-danger">$260</span><br>
+                                             </div>
+                                             <!-- <div class="col-4 text-center mb-3">
+                                                  <p class="mb-1 small text-muted">Target Sales</p>
+                                                  <span class="h3 target-sales text-primary">$260</span><br>
+                                             </div> -->
+                                             <div class="col-4 text-center mb-3">
+                                                  
+                                             </div>
+                                        </div>
+                                   </div> <!-- .card-body -->
+                               </div> <!-- .card -->
+                         </div>
+                    </div> <!-- .row -->
 
-                    {{-- <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-4 col-form-label">Pilih Data</label>
-                        <div class="col-sm-8">
-                            <select name="" id="" class="form-control">
-                                <option value="">Komponen</option>
-                                <option value="">Mobil</option>
-                            </select>
-                        </div>
-                    </div> --}}
-                </form>
-
-                
-            </div>
-        </div>
-        <div class="row items-align-baseline">
-            <div class="col-md-12">
-                  <div class="card shadow mb-4">
-                    <div class="card-header">
-                      <strong>Goal</strong>
+                    <div class="row items-align-baseline">
+                         <div class="col-md-12">
+                              <div class="card shadow mb-4">
+                                   <div class="card-body">
+                                        <div class="py-5 text-center">
+                                             <p class="text-muted mb-2">Target Sales</p>
+                                             <h2 class="mb-1 target-sales text-primary">1,254</h2>
+                                        </div>
+                                        <div class="row align-items-center mb-1">
+                                             <div class="col-auto">
+                                                  <div class="my-2 text-left">
+                                                       <small class="text-danger mr-2">High</small>
+                                                       <small class="text-warning mx-2">Medium</small>
+                                                       <small class="text-success mx-2">Low</small>
+                                                  </div>
+                                             </div>
+                                             <div class="col text-right">
+                                                  <small class="mb-0 text-muted">Statistics</small>
+                                             </div>
+                                        </div>
+                                        <div class="progress rounded mb-3 target-progressbar" style="height:14px">
+                                             <div class="progress-bar bg-danger" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+                                             <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                                             <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
                     </div>
-                    <div class="card-body px-4">
-                      <div class="row border-bottom">
-                        <div class="col-6 text-center mb-3">
-                          <p class="mb-1 small text-muted">Total Actual Sales</p>
-                          <span class="h3 actual-sales text-success">26</span><br>
-                          <!-- <span class="small text-muted">Unit</span> -->
-                          <!-- <span class="fe fe-arrow-up text-success fe-12"></span> -->
-                        </div>
-                        <div class="col-6 text-center mb-3">
-                          <p class="mb-1 small text-muted">Total Forecast Sales</p>
-                          <span class="h3 forecast-sales text-danger">$260</span><br>
-                          <!-- <span class="small text-muted">Unit</span> -->
-                          <!-- <span class="fe fe-arrow-up text-success fe-12"></span> -->
-                        </div>
-                        <div class="col-4 text-center mb-3">
-                          <!-- <p class="mb-1 small text-muted">Conversion</p>
-                          <span class="h3">6%</span><br>
-                          <span class="small text-muted">-2%</span>
-                          <span class="fe fe-arrow-down text-danger fe-12"></span> -->
-                        </div>
-                      </div>
-                      <!-- <table class="table table-borderless mt-3 mb-1 mx-n1 table-sm">
-                        <thead>
-                          <tr>
-                            <th class="w-50">Goal</th>
-                            <th class="text-right">Conversion</th>
-                            <th class="text-right">Completions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Checkout</td>
-                            <td class="text-right">5%</td>
-                            <td class="text-right">260</td>
-                          </tr>
-                          <tr>
-                            <td>Add to Cart</td>
-                            <td class="text-right">55%</td>
-                            <td class="text-right">1260</td>
-                          </tr>
-                          <tr>
-                            <td>Contact</td>
-                            <td class="text-right">18%</td>
-                            <td class="text-right">460</td>
-                          </tr>
-                        </tbody>
-                      </table> -->
-                    </div> <!-- .card-body -->
-                  </div> <!-- .card -->
-                </div>
-            
-            
-        </div> <!-- .row -->
+        
 
           <div class="mb-2 align-items-center" id="div-chart">
                <div class="card shadow mb-4">

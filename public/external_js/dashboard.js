@@ -27,7 +27,7 @@ function countProduct(year) {
           }
      })
      .done(function( data ) {
-          console.log(JSON.parse(data))
+          // console.log(JSON.parse(data))
           var parseData = JSON.parse(data)
           var penjualanTertinggi = Math.max(...parseData.penjualan)
           var penjualanTerendah = Math.min(...parseData.penjualan)
@@ -40,10 +40,51 @@ function countProduct(year) {
           $('#div-radial').html('')
           $('#div-pie').html('')
           $('#div-cartype').html('')
+          $('.target-progressbar').html('')
 
           var persentaseCar1 = ((parseData.jml[0]/jml_tipe_mobil) * 100).toFixed(0);
           var persentaseCar2 = ((parseData.jml[1]/jml_tipe_mobil) * 100).toFixed(0);
           var persentaseCar3 = ((parseData.jml[2]/jml_tipe_mobil) * 100).toFixed(0);
+          var target_sales = parseData.target_sales[0].target;
+          var persentaseTargetVSActual = ((sumPenjualan/target_sales)*100).toFixed(0)
+          console.log(persentaseTargetVSActual)
+          if(persentaseTargetVSActual < 70) {
+               swal("Actual sales is not achieve", "Abnormality Case", "warning");
+          }
+          var pgAwal = 15;
+          var pgTengah = 30;
+          var pgAkhir = 65;
+
+          var htmlTargetProgressBar = '';
+          var htmlPGAawal = ''
+          var htmlPGTengah = ''
+          var htmlPGAkhir = ''
+          if(persentaseTargetVSActual > pgAwal) {
+               htmlTargetProgressBar += '<div class="progress-bar bg-danger" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>';
+               persentaseTargetVSActual = persentaseTargetVSActual - pgAwal;
+          }
+
+          console.log(persentaseTargetVSActual)
+          if(persentaseTargetVSActual > 0) {
+               if(persentaseTargetVSActual > pgTengah) {
+                    htmlTargetProgressBar += '<div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">'+persentaseTargetVSActual+'%</div>';
+               } else {
+                    htmlTargetProgressBar += '<div class="progress-bar bg-warning" role="progressbar" style="width: '+persentaseTargetVSActual+'%" aria-valuenow="'+persentaseTargetVSActual+'" aria-valuemin="0" aria-valuemax="100">'+persentaseTargetVSActual+'%</div>';
+               }
+               persentaseTargetVSActual = persentaseTargetVSActual - pgTengah;
+
+          }
+          console.log(persentaseTargetVSActual)
+
+          if(persentaseTargetVSActual > 0) {
+               htmlTargetProgressBar += '<div class="progress-bar bg-success" role="progressbar" style="width: '+persentaseTargetVSActual+'%" aria-valuenow="'+persentaseTargetVSActual+'" aria-valuemin="0" aria-valuemax="100">'+persentaseTargetVSActual+'%</div>';
+          }
+           
+
+          $('.target-progressbar').html(htmlTargetProgressBar)
+          $('.target-sales').html(numberWithSeparator(target_sales))
+
+          
           var htmlCarType = '<div class="row align-items-center my-2">'+
                                    '<div class="col">'+
                                         '<strong>'+parseData.tipe_mobil[0]+'</strong>'+
@@ -523,8 +564,6 @@ function countProduct(year) {
                     },
           lineChartCtn=document.querySelector("#areaChart");
           lineChartCtn&&(areachart=new ApexCharts(lineChartCtn,areaChartOptions)).render();
-          
-          console.log(areaChartOptions, 'area chart')
      
           var pieChartWidget,pieChartWidgetOptions={
                series: [parseData.jml[0], parseData.jml[1], parseData.jml[2]],
