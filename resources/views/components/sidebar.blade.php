@@ -6,7 +6,7 @@
       <!-- nav bar -->
       <div class="w-100 mb-4 d-flex">
         <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="/">
-          <img src="{{asset('assets')}}/images/toyota-logo-loading.png" alt="" class="sidebar-logo">
+          <img src="{{asset('assets')}}/images/logopidi.jpeg" alt="" class="sidebar-logo">
           {{-- <svg version="1.1" id="logo" class="navbar-brand-img brand-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
             <g>
               <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
