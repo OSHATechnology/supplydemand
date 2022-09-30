@@ -7,6 +7,7 @@ use App\Http\Controllers\DetailPenjualanController;
 use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\MobilController;
 use App\Http\Controllers\PenjualanController;
+use App\Http\Controllers\DashboardController;
 use App\Models\Produksi;
 use Illuminate\Support\Facades\Route;
 
@@ -23,29 +24,32 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = Produksi::groupBy('tahun')->get();
-    return view('components.dashboard', ['data'=>$data]);
+    return view('components.dashboard', ['data' => $data]);
 });
 
 // Cabang
 Route::get('/cabang', [CabangController::class, 'index']);
 
 // Barang
-Route::get('/barang',[BarangController::class, 'index']);
+Route::get('/barang', [BarangController::class, 'index']);
 
 // JenisBarang
-Route::get('/jenisbarang',[JenisBarangController::class, 'index']);
+Route::get('/jenisbarang', [JenisBarangController::class, 'index']);
 
 // Penjualan
-Route::get('/sales',[PenjualanController::class, 'index']);
+Route::get('/sales', [PenjualanController::class, 'index']);
 
 // Detail Penjualan
-Route::get('/salesdetail',[DetailPenjualanController::class, 'index']);
+Route::get('/salesdetail', [DetailPenjualanController::class, 'index']);
 
 // Mobil
-Route::get('/car',[MobilController::class, 'index']);
+Route::get('/car', [MobilController::class, 'index']);
 
 // Detail Mobil
-Route::get('/cardetail',[DetailMobilController::class, 'index']);
+Route::get('/cardetail', [DetailMobilController::class, 'index']);
 
 // countPenjualan
-Route::get('/countPenjualan/{year}',[BarangController::class, 'countPenjualan']);
+Route::get('/countPenjualan/{year}', [BarangController::class, 'countPenjualan']);
+
+// New Dashboard
+Route::get('/the-dashboard', [DashboardController::class, 'index']);

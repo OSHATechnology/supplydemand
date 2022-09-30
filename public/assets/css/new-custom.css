@@ -1,0 +1,39 @@
+body {
+    background: #353535;
+}
+
+p {
+    margin: 0;
+}
+
+.content {
+    margin: 1% 0;
+}
+
+.row.modification {
+    margin: initial 0;
+}
+
+.row.modification > * {
+    padding: initial 0;
+}
+
+.navbar {
+    color: #fbfbfb;
+}
+
+.navbar-brand {
+    color: #fbfbfb;
+}
+
+.card {
+    background: #5e5e5e;
+    color: #fbfbfb;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.card-title h5 {
+    margin-bottom: 0 !important;
+}
