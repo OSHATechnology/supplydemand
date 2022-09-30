@@ -6,6 +6,11 @@ p {
     margin: 0;
 }
 
+p.large {
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .content {
     margin: 1% 0;
 }
@@ -20,14 +25,21 @@ p {
 
 .navbar {
     color: #fbfbfb;
+    border-bottom: 1px solid #fbfbfb;
 }
 
 .navbar-brand {
     color: #fbfbfb;
+    margin-right: 0;
+    padding-top: 0;
+}
+
+.dashboard-name {
+    font-weight: 700;
 }
 
 .card {
-    background: #5e5e5e;
+    background: #444444;
     color: #fbfbfb;
     width: 100%;
     height: 100%;
@@ -36,4 +48,40 @@ p {
 
 .card-title h5 {
     margin-bottom: 0 !important;
+}
+
+.form-control, .form-select, .form-component {
+    border-radius: 0;
+}
+
+.form-select {
+    font-size: 13px;
+}
+
+.form-control.dark, .form-select.dark {
+    background-color: #5e5e5e;
+    border: 1px solid #fbfbfb;
+    color: #fbfbfb;
+}
+
+.form-control.black, .form-select.black , .form-component.black {
+    background-color: #212529;
+    border: 1px solid #fbfbfb;
+    color: #70aada;
+}
+
+.content .card-title {
+    text-align: center;
+}
+
+tspan {
+    fill: #fbfbfb;
+}
+
+span.apexcharts-legend-text {
+    color: #fbfbfb !important;
+}
+
+@media screen {
+    
 }

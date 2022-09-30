@@ -1,39 +1,47 @@
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-        <div class="header row w-100">
-            <div class="col d-flex flex-column justify-content-evenly">
-                <a class="navbar-brand" href="#">Navbar</a>
+        <div class="header d-flex w-100 justify-content-between mx-3 pb-2 gap-3">
+            <div class="d-flex flex-column justify-content-between align-items-center text-center" style="width: 10%">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/images/logopidi.jpeg" alt="" class="img-fluid">
+                </a>
                 <div>
                     <p>Last Refresh Date</p>
                     <p>03/20/2021</p>
                 </div>
             </div>
-            <div class="col">
-                <h3>The Dashboard</h3>
-                <div class="d-flex">
-                    <h5>Property 2</h5>
-                    <h5>2-BR/1-BA</h5>
-                </div>
-            </div>
-            <div class="col">
-                <div class="d-flex">
-                    <div class="form-group">
-                        <div class="form-label">label</div>
-                        <input type="text">
-                    </div>
-                    <div class="form-group">
-                        <div class="form-label">label</div>
-                        <input type="text">
+            <div class="text-center align-self-center" style="width: 25%">
+                <div class="d-flex flex-column justify-content-between">
+                    <h3 class="dashboard-name">The Dashboard</h3>
+                    <div class="d-flex justify-content-between gap-5 px-3">
+                        <h5>Property 2</h5>
+                        <h5>2-BR/1-BA</h5>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="d-flex flex-column">
-                    <div class="form-group">
+            <div class="justify-content-center" style="width: 30%">
+                <div class="d-flex gap-3">
+                    <div class="form-group w-100">
                         <div class="form-label">label</div>
-                        <div class="d-flex">
-                            <input type="date" class="form-control" />
-                            <input type="date" class="form-control" />
+                        <select name="" id="" class="form-select dark w-100">
+                            <option value="">Some Option</option>
+                        </select>
+                    </div>
+                    <div class="form-group w-100">
+                        <div class="form-label">label</div>
+                        <select name="" id="" class="form-select dark w-100">
+                            <option value="">Some Option</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="justify-content-center" style="width: 25%">
+                <div class="d-flex flex-column gap-1">
+                    <div class="form-group w-100">
+                        <div class="form-label">label</div>
+                        <div class="d-flex gap-3">
+                            <input type="date" class="form-component w-100 black" />
+                            <input type="date" class="form-component w-100 black" />
                         </div>
                     </div>
                     <div class="slidecontainer">
@@ -43,7 +51,6 @@
                 </div>
             </div>
         </div>
-        <hr class="nav-divider" />
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

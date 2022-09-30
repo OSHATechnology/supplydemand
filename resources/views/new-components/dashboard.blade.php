@@ -9,17 +9,17 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Title</h5>
-                        This is some text within a card body.
+                        <div id="chart1" class="text-dark"></div>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col d-flex flex-column justify-content-between">
                 {{--  --}}
-                <div class="row mb-3">
+                <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">This is some text within a card body.</h5>
+                                <h5 class="card-title">This is some text within a card body (90 Days Out)</h5>
                             </div>
                         </div>
                     </div>
@@ -28,25 +28,25 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
-                                    100
+                                    <p class="text-center large">100</p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
-                                    100
+                                    <p class="text-center large">100</p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
-                                    100
+                                    <p class="text-center large">100</p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
-                                    100
+                                    <p class="text-center large">100%</p>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                     <div class="col-12 my-1">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">This is some text within a card body.</h5>
+                                <h5 class="card-title">This is some text within a card body (Last 90 Days)</h5>
                             </div>
                         </div>
                     </div>
@@ -68,19 +68,19 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
-                                    This is some text within a card body.
+                                    <div id="chart2" class="text-dark"></div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
-                                    This is some text within a card body.
+                                    <div id="chart3" class="text-dark"></div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
-                                    This is some text within a card body.
+                                    <div id="chart4" class="text-dark"></div>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">This is some text within a card body.</h5>
-                        This is some text within a card body.
+                        <div id="chart5" class="text-dark"></div>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">This is some text within a card body.</h5>
-                        This is some text within a card body.
+                        <div id="chart6" class="text-dark"></div>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">This is some text within a card body.</h5>
-                        This is some text within a card body.
+                        <div id="chart7" class="text-dark"></div>
                     </div>
                 </div>
             </div>
