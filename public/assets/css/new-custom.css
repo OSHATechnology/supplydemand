@@ -67,7 +67,7 @@ p.large {
 .form-control.black, .form-select.black , .form-component.black {
     background-color: #212529;
     border: 1px solid #fbfbfb;
-    color: #70aada;
+    color: #fbfbfb;
 }
 
 .content .card-title {
@@ -82,6 +82,6 @@ span.apexcharts-legend-text {
     color: #fbfbfb !important;
 }
 
-@media screen {
+@media only screen and (max-width: 3840) {
     
 }
