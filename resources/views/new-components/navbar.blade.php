@@ -5,7 +5,7 @@
                 <a class="navbar-brand" href="#">
                     <img src="/assets/images/logopidi.jpeg" alt="" class="img-fluid">
                 </a>
-                <div>
+                <div class="last-refresh">
                     <p>Last Refresh Date</p>
                     <p>03/20/2021</p>
                 </div>
@@ -13,7 +13,7 @@
             <div class="text-center align-self-center" style="width: 25%">
                 <div class="d-flex flex-column justify-content-between">
                     <h3 class="dashboard-name">The Dashboard</h3>
-                    <div class="d-flex justify-content-between gap-5 px-3">
+                    <div class="d-flex justify-content-between gap-5 px-3 dashboard-name-detail">
                         <h5>Property 2</h5>
                         <h5>2-BR/1-BA</h5>
                     </div>

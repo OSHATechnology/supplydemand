@@ -12,8 +12,8 @@ var options = {
     data: [15, 14, 12, 11, 11, 12, 15]
   }],
     chart: {
-    height: 350,
-    type: 'area'
+    height: '100%',
+    type: 'area',
   },
   dataLabels: {
     enabled: true
