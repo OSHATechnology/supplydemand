@@ -20,16 +20,16 @@
                 </div>
             </div>
             <div class="justify-content-center" style="width: 30%">
-                <div class="d-flex gap-3">
-                    <div class="form-group w-100">
+                <div class="row gap-3">
+                    <div class="col">
                         <div class="form-label">label</div>
-                        <select name="" id="" class="form-select dark w-100">
+                        <select name="" id="" class="form-select dark">
                             <option value="">Some Option</option>
                         </select>
                     </div>
-                    <div class="form-group w-100">
+                    <div class="col">
                         <div class="form-label">label</div>
-                        <select name="" id="" class="form-select dark w-100">
+                        <select name="" id="" class="form-select dark">
                             <option value="">Some Option</option>
                         </select>
                     </div>

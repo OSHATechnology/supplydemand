@@ -1,3 +1,4 @@
+$(document).ready(function() {
 // Area Chart
 var options = {
     series: [{
@@ -12,11 +13,11 @@ var options = {
     data: [15, 14, 12, 11, 11, 12, 15]
   }],
     chart: {
-    height: '100%',
+    height: '90%',
     type: 'area',
   },
   dataLabels: {
-    enabled: true
+    enabled: true,
   },
   stroke: {
     curve: 'smooth',
@@ -30,7 +31,21 @@ var options = {
       format: 'dd/MM/yy HH:mm'
     },
   },
+  legend: {
+
+  },
   colors: ['#0084ff', '#ffae00', '#70aada'],
+  responsive: [{
+    breakpoint: undefined,
+    options: {
+      dataLabels: {
+        enabled: true,
+        style: {
+          fontSize: '35px',
+        } 
+      }
+    },
+  }]
 };
 
 var chart = new ApexCharts(document.querySelector("#chart1"), options);
@@ -273,3 +288,5 @@ colors: ['#0084ff', '#ffae00', '#70aada'],
 
 var chart = new ApexCharts(document.querySelector("#chart7"), options);
 chart.render();
+
+})

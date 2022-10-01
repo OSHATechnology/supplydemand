@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row my-3">
             <div class="col">
-                <div class="card">
+                <div class="card card-set-height">
                     <div class="card-body">
                         <h5 class="card-title">Title</h5>
                         <div id="chart1" class="text-dark"></div>
